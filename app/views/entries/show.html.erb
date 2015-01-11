@@ -5,4 +5,5 @@
 
 <% if owned_by_current_user? %>
 	<%= link_to "Edit", edit_user_entry_path(current_user, entry) %>
+	<%= link_to "Delete", user_entry_path, method: :delete %>
 <% end %>
