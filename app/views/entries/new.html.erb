@@ -1,0 +1,20 @@
+<h1>New entry</h1>
+
+<%= form_for([current_user, current_user.entries.build]) do |f|%>
+	<div class="field">
+		<%= f.label "Author" %>
+		<%= f.text_field :author %>
+	</div>
+	
+	<div class="field">
+		<%= f.label "Photo url" %>
+		<%= f.text_field :photo_url %>  
+	</div>
+	
+	<div class="field">
+		<%= f.label "Date taken" %>
+		<%= f.text_field :date_taken, value: Time.now %>
+	</div>
+
+	<%= f.submit %>
+<% end %>  

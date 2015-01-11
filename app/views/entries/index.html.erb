@@ -1,0 +1,7 @@
+<h1>My Entries</h1>
+
+<ul>
+	<% @all_entries.each do |entry| %>
+		<li class="crop"><%= link_to entry.inspect, user_entry_path(current_user, entry) %></li>
+	<% end %>
+</ul>

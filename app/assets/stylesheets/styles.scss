@@ -1,0 +1,35 @@
+li {
+	list-style: none;
+	display: inline-block;
+}
+
+nav {
+	float: right;
+	form { 
+		display: inline-block;
+		padding-right: 10px;
+	}
+	li { 
+		padding-right: 10px;
+	}
+	a {	text-decoration: none; }
+}
+
+img {
+	max-width: 600px;
+}
+
+.crop {
+	width: 400px;
+	height: 400px;
+	overflow: hidden;
+	text-align: center;
+
+	img {
+		min-width: 100%;
+		min-height: 100%;
+		position: relative; /* allows repositioning */
+    left: 100%; /* move the whole width of the image to the right */
+    margin-left: -200%; /* magic! */
+	}
+}
