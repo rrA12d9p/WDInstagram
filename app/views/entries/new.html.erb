@@ -1,6 +1,7 @@
 <h1>New entry</h1>
 
 <%= form_for([current_user, current_user.entries.build]) do |f|%>
+	
 	<div class="field">
 		<%= f.label "Author" %>
 		<%= f.text_field :author %>
@@ -17,4 +18,5 @@
 	</div>
 
 	<%= f.submit %>
-<% end %>  
+	
+<% end %> 

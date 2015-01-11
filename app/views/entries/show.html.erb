@@ -1,4 +1,8 @@
-<h1><%= "Entry #{@entry.id}" %></h1>
-<p><%= image_tag @entry.photo_url %></p>
-<p>By <%= @entry.author %></p>
-<p>Taken <%= @entry.date_taken %></p>
+<h1><%= "Entry #{entry.id}" %></h1>
+<p><%= image_tag entry.photo_url %></p>
+<p>By <%= entry.author %></p>
+<p>Taken <%= entry.date_taken %></p>
+
+<% if owned_by_current_user? %>
+	<%= link_to "Edit", edit_user_entry_path(current_user, entry) %>
+<% end %>
