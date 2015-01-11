@@ -1,4 +1,6 @@
 class EntriesController < ApplicationController
+  helper :all
+
   before_action :authenticate_user!, except: [:all, :show]
 
   def all
@@ -26,13 +28,20 @@ class EntriesController < ApplicationController
   end
 
   def update
+    entry = Entry.find(params[:id])
+
+    if entry.update(entry_params)
+      redirect_to root_path
+    else
+      render 'entries#edit'
+    end
   end
 
   def destroy
   end
 
   def show
-    @entry = Entry.find(params[:id])
+    
   end
 
   def entry_params
