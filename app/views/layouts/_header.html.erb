@@ -6,10 +6,8 @@
 			<li><%= link_to "All Entries", all_entries_path  %></li>
 			<li><%= link_to "My Entries", user_entries_path(current_user)  %></li>
 			<li><%= link_to "New Entry", new_user_entry_path(current_user)  %></li>
+			<li><%= link_to "Log out", destroy_user_session_path, method: :delete  %></li>
 			
-			<%= form_tag(destroy_user_session_path, method: "delete") do %>
-				<%= submit_tag "Logout", class: "submit" %>
-			<% end %>
 
 		<% else %>
 			<li><%= link_to "Sign in", new_user_session_path  %></li>
