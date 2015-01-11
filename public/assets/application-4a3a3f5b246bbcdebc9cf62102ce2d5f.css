@@ -1,0 +1,64 @@
+/* line 1, /Users/treyhoover/Dev/General_Assembly/projects/WDInstragram/app/assets/stylesheets/styles.scss */
+html {
+  min-width: 600px;
+}
+
+/* line 5, /Users/treyhoover/Dev/General_Assembly/projects/WDInstragram/app/assets/stylesheets/styles.scss */
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+/* line 11, /Users/treyhoover/Dev/General_Assembly/projects/WDInstragram/app/assets/stylesheets/styles.scss */
+header a {
+  text-decoration: none;
+}
+/* line 13, /Users/treyhoover/Dev/General_Assembly/projects/WDInstragram/app/assets/stylesheets/styles.scss */
+header nav {
+  float: right;
+}
+/* line 16, /Users/treyhoover/Dev/General_Assembly/projects/WDInstragram/app/assets/stylesheets/styles.scss */
+header nav li {
+  padding-right: 10px;
+}
+
+/* line 23, /Users/treyhoover/Dev/General_Assembly/projects/WDInstragram/app/assets/stylesheets/styles.scss */
+img {
+  max-width: 600px;
+}
+
+/* line 27, /Users/treyhoover/Dev/General_Assembly/projects/WDInstragram/app/assets/stylesheets/styles.scss */
+.crop {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  text-align: center;
+}
+/* line 33, /Users/treyhoover/Dev/General_Assembly/projects/WDInstragram/app/assets/stylesheets/styles.scss */
+.crop img {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 400px;
+  position: relative;
+  /* allows repositioning */
+  left: 100%;
+  /* move the whole width of the image to the right */
+  margin-left: -200%;
+  /* magic! */
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
