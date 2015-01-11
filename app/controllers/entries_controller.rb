@@ -38,10 +38,16 @@ class EntriesController < ApplicationController
   end
 
   def destroy
+    entry = Entry.find(params[:id])
+
+    if entry.destroy
+      redirect_to root_path
+    else
+      render 'entries#show'
+    end
   end
 
   def show
-    
   end
 
   def entry_params
