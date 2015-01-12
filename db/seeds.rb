@@ -2,7 +2,7 @@
   Role.find_or_create_by({name: role})
 end
 
-admin = User.create(email: "admin@email.com", password: "password", password_confirmation: "password")
+admin = User.create(email: "admin@email.com", username: "admin", password: "password", password_confirmation: "password")
 admin.update(role: Role.find_by_name('admin'))
 admin.entries.create(
 	author: Faker::Name.name, 
