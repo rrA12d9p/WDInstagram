@@ -27,6 +27,6 @@
 
 <ul>
 	<% entry.comments.each do |comment| %>
-		<li class="comment"><%= "#{comment.body} - #{comment.user.email}" %></li>
+		<li class="comment"><%= "#{comment.body} - #{comment.user.username}" %></li>
 	<% end %>
 </ul>
