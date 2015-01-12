@@ -1,6 +1,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
-# before_filter :configure_sign_up_params, only: [:create]
-# before_filter :configure_account_update_params, only: [:update]
+  before_filter :configure_sign_up_params
+  # before_filter :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
   # def new
@@ -36,12 +36,19 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # protected
+  def new
+    # Override Devise default behaviour and create a profile
+    build_resource({})
+    resource.build_profile
+    respond_with self.resource
+  end
+
+  protected
 
   # You can put the params you want to permit in the empty array.
-  # def configure_sign_up_params
-  #   devise_parameter_sanitizer.for(:sign_up) << profile_attributes: [:name]
-  # end
+  def configure_sign_up_params
+    devise_parameter_sanitizer.for(:sign_up).push(:username, profile_attributes: [:name])
+  end
 
   # You can put the params you want to permit in the empty array.
   # def configure_account_update_params
