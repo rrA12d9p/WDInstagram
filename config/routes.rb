@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   
   resources :users do
     resources :entries
+    resources :comments, only: [:create, :new]
   end
+
 
   get '/entries/all', to: 'entries#all', as: :all_entries
 

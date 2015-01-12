@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :entries
+  has_many :comments, through: :entries
   has_one :profile
 
   accepts_nested_attributes_for :profile
