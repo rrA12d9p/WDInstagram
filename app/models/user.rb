@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   belongs_to :role
   has_many :entries
-  has_many :comments, through: :entries
+  has_many :comments, through: :entries, dependent: :destroy
   has_one :profile
 
   accepts_nested_attributes_for :profile
