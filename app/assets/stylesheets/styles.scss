@@ -108,9 +108,15 @@ img {
 	margin: 5px;
 
 	img {
+		background: black;
+		opacity: 0.8;
 		min-width: 100%;
 		min-height: 100%;
 		max-width: 400px;
 		position: relative;
+
+		&:hover {
+			opacity: 1;
+		}
 	}
 }
