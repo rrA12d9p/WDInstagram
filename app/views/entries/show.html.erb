@@ -1,6 +1,6 @@
 <h1><%=entry.title.nil? ? "Entry #{entry.id}" : entry.title %></h1>
 
-<% if owned_by_current_user? || current_user.role.name == 'admin' %>
+<% if owned_by_current_user? || (user_signed_in? && current_user.role.name == 'admin') %>
 	<%= link_to "Edit", edit_user_entry_path(current_user, entry) %>
 	<%= link_to "Delete", user_entry_path, method: :delete %>
 <% end %>
