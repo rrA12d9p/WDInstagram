@@ -5,16 +5,9 @@ end
 admin = User.create(email: "admin@superbowlgifs.com", username: "admin", password: "password", password_confirmation: "password")
 admin.update(role: Role.find_by_name('admin'))
 admin.entries.create([
-	{author: "Trey", photo_url: "http://pixel.nymag.com/imgs/daily/intelligencer/2015/02/01/super-bowl-gifs/katy-sharks.nocrop.w529.h316.2x.gif", date_taken: "2/1/2015"},
-	{author: "Trey", photo_url: "http://pixel.nymag.com/imgs/daily/intelligencer/2015/02/01/super-bowl-gifs/lynch-skittles.nocrop.w529.h316.2x.gif", date_taken: "2/1/2015"},
-	{author: "Trey", photo_url: "http://pixel.nymag.com/imgs/daily/intelligencer/2015/02/01/super-bowl-gifs/brady-td.nocrop.w529.h316.2x.gif", date_taken: "2/1/2015"},
-	{author: "Trey", photo_url: "http://pixel.nymag.com/imgs/daily/intelligencer/2015/02/01/super-bowl-gifs/brady-lafell.nocrop.w529.h316.2x.gif", date_taken: "2/1/2015"},
-	{author: "Trey", photo_url: "http://pixel.nymag.com/imgs/daily/intelligencer/2015/02/01/super-bowl-gifs/tyler.nocrop.w529.h316.2x.gif", date_taken: "2/1/2015"},
-	{author: "Trey", photo_url: "http://pixel.nymag.com/imgs/daily/intelligencer/2015/02/01/super-bowl-gifs/lynch-td.nocrop.w529.h316.2x.gif", date_taken: "2/1/2015"},
-	{author: "Trey", photo_url: "http://pixel.nymag.com/imgs/daily/intelligencer/2015/02/01/super-bowl-gifs/alt-matthews-td.nocrop.w529.h316.2x.gif", date_taken: "2/1/2015"},
-	{author: "Trey", photo_url: "http://pixel.nymag.com/imgs/daily/intelligencer/2015/02/01/super-bowl-gifs/matthews-2ndhalf-catch.nocrop.w529.h316.2x.gif", date_taken: "2/1/2015"},
-	{author: "Trey", photo_url: "http://pixel.nymag.com/imgs/daily/intelligencer/2015/02/01/super-bowl-gifs/baldwin-pick-td.nocrop.w529.h316.2x.gif", date_taken: "2/1/2015"},
-	{author: "Trey", photo_url: "http://pixel.nymag.com/imgs/daily/intelligencer/2015/02/01/super-bowl-gifs/baldwin-poop.nocrop.w529.h316.2x.gif", date_taken: "2/1/2015"}
+	{title: "Dancing Sharks!", caption: "The best part of all", author: "Trey", photo_url: "http://pixel.nymag.com/imgs/daily/intelligencer/2015/02/01/super-bowl-gifs/katy-sharks.nocrop.w529.h316.2x.gif", date_taken: "2/1/2015"},
+	{title: "Skittles", caption: "Marshawn Lynch tasting the rainbow", author: "Trey", photo_url: "http://pixel.nymag.com/imgs/daily/intelligencer/2015/02/01/super-bowl-gifs/lynch-skittles.nocrop.w529.h316.2x.gif", date_taken: "2/1/2015"},
+	{title: "Steven Tyler", caption: "Chew with your mouth closed, bro", author: "Trey", photo_url: "http://pixel.nymag.com/imgs/daily/intelligencer/2015/02/01/super-bowl-gifs/tyler.nocrop.w529.h316.2x.gif", date_taken: "2/1/2015"},
 ])
 
 # users = User.create([
