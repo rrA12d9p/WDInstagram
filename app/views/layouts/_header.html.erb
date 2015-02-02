@@ -1,5 +1,5 @@
 <header>
-		<a href="/">WDInstagram</a>
+		<a href="/">superbowlgifs</a>
 	<nav>
 		<!-- buttons change if logged in -->
 		<%if user_signed_in? %>
@@ -7,11 +7,10 @@
 			<li><%= link_to "My Entries", user_entries_path(current_user)  %></li>
 			<li><%= link_to "New Entry", new_user_entry_path(current_user)  %></li>
 			<li><%= link_to "Log out", destroy_user_session_path, method: :delete  %></li>
-			
 
 		<% else %>
 			<li><%= link_to "Sign in", new_user_session_path  %></li>
-			<li><%= link_to "Create an account", new_user_registration_path  %></li>
+			<li><%= link_to "Create An Account", new_user_registration_path  %></li>
 		<% end %>
 	</nav>
 </header>

@@ -4,6 +4,7 @@ ruby '2.1.2'
 
 gem 'devise'
 gem 'faker'
+gem 'rename'
 
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'

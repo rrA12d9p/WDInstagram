@@ -1,18 +1,19 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 * { 
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
-html {
+html, body {
 	font-family: 'Open Sans', sans-serif;
 	min-width: 600px;
+	margin: 0;
+	padding: 0;
 	background: #333;
 	color: #fff;
-
-	body {
-		margin: 0;
-	}
 }
 
 header {
@@ -28,6 +29,8 @@ header {
 
 		&:hover {
 			background: #CC2232;
+			color: #fff;
+			text-decoration: none;
 		}
 	}
 
@@ -94,6 +97,14 @@ main {
 			padding: 10px;
 		}
 	}
+}
+
+footer, footer p {
+	margin: 0;
+	text-align: center;
+	background: #000;
+	color: #fff;
+	padding: 10px;
 }
 
 img {

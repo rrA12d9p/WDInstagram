@@ -4,7 +4,7 @@ class EntriesController < ApplicationController
   before_action :authenticate_user!, except: [:all, :show]
 
   def all
-    @all_entries = Entry.order(updated_at: :desc)
+    @all_entries = Entry.order(updated_at: :asc)
   end
 
   def index
